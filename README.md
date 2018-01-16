@@ -1,6 +1,6 @@
 instagram-tagscrape
 ==============
-NodeJS module for loading posts from Instagram by hashtag, individual post pages and locationpages without API access by means of scraping. Note: Working on Instagram's public pages as of August 8th, 2017
+NodeJS module for loading posts from Instagram by hashtag, individual post pages and locationpages without API access by means of scraping. Note: Working on Instagram's public pages as of January 16th, 2018
 
 [![Build Status](https://travis-ci.org/evolross/instagram-tagscrape.svg?branch=master)](https://travis-ci.org/evolross/instagram-tagscrape)
 
