@@ -45,6 +45,7 @@ exports.scrapeTagPage = function(tag) {
             var data = scrape(body)
 
             if (data && data.entry_data && 
+                data.entry_data.TagPage &&
                 data.entry_data.TagPage[0] && 
                 data.entry_data.TagPage[0].graphql &&
                 data.entry_data.TagPage[0].graphql.hashtag &&
@@ -71,6 +72,7 @@ exports.scrapePostPage = function(code) {
         request(postURL + code, function(err, response, body){
             var data = scrape(body);
             if (data && data.entry_data && 
+                data.entry_data.PostPage &&
                 data.entry_data.PostPage[0] && 
                 data.entry_data.PostPage[0].graphql && 
                 data.entry_data.PostPage[0].graphql.shortcode_media) {
@@ -91,6 +93,7 @@ exports.scrapeLocationPage = function(id) {
             var data = scrape(body);
 
             if (data && data.entry_data && 
+                data.entry_data.LocationsPage &&
                 data.entry_data.LocationsPage[0] && 
                 data.entry_data.LocationsPage[0].location) {
                 resolve(data.entry_data.LocationsPage[0].location);
