@@ -59,7 +59,7 @@ exports.scrapeTagPage = function(tag) {
                 });
             }
             else {
-                reject(new Error('Error scraping tag page "' + tag + '"'));
+                reject(new Error('Error scraping tag page or no pages found "' + tag + '"'));
             }
         })
     });
@@ -79,7 +79,7 @@ exports.scrapePostPage = function(code) {
                 resolve(data.entry_data.PostPage[0].graphql.shortcode_media); 
             }
             else {
-                reject(new Error('Error scraping post page "' + code + '"'));
+                reject(new Error('Error scraping post page or no posts found "' + code + '"'));
             }
         });
     });
@@ -99,7 +99,7 @@ exports.scrapeLocationPage = function(id) {
                 resolve(data.entry_data.LocationsPage[0].location);
             }
             else {
-                reject(new Error('Error scraping location page "' + id + '"'));
+                reject(new Error('Error scraping location page or no locations found "' + id + '"'));
             }
         });
     });
