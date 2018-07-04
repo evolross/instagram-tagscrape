@@ -45,6 +45,7 @@ exports.scrapeTagPage = function(tag) {
             var data = scrape(body)
 
             if (data && data.entry_data && 
+                data.entry_data.TagPage &&
                 data.entry_data.TagPage[0] && 
                 data.entry_data.TagPage[0].graphql &&
                 data.entry_data.TagPage[0].graphql.hashtag &&
@@ -58,7 +59,7 @@ exports.scrapeTagPage = function(tag) {
                 });
             }
             else {
-                reject(new Error('Error scraping tag page "' + tag + '"'));
+                reject(new Error('Error scraping tag page or no pages found "' + tag + '"'));
             }
         })
     });
@@ -71,13 +72,14 @@ exports.scrapePostPage = function(code) {
         request(postURL + code, function(err, response, body){
             var data = scrape(body);
             if (data && data.entry_data && 
+                data.entry_data.PostPage &&
                 data.entry_data.PostPage[0] && 
                 data.entry_data.PostPage[0].graphql && 
                 data.entry_data.PostPage[0].graphql.shortcode_media) {
                 resolve(data.entry_data.PostPage[0].graphql.shortcode_media); 
             }
             else {
-                reject(new Error('Error scraping post page "' + code + '"'));
+                reject(new Error('Error scraping post page or no posts found "' + code + '"'));
             }
         });
     });
@@ -91,13 +93,14 @@ exports.scrapeLocationPage = function(id) {
             var data = scrape(body);
 
             if (data && data.entry_data && 
+                data.entry_data.LocationsPage &&
                 data.entry_data.LocationsPage[0] && 
                 data.entry_data.LocationsPage[0].graphql && 
                 data.entry_data.LocationsPage[0].graphql.location) {
                 resolve(data.entry_data.LocationsPage[0].graphql.location);
             }
             else {
-                reject(new Error('Error scraping location page "' + id + '"'));
+                reject(new Error('Error scraping location page or no locations found "' + id + '"'));
             }
         });
     });
