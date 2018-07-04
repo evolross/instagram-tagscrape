@@ -92,8 +92,9 @@ exports.scrapeLocationPage = function(id) {
 
             if (data && data.entry_data && 
                 data.entry_data.LocationsPage[0] && 
-                data.entry_data.LocationsPage[0].location) {
-                resolve(data.entry_data.LocationsPage[0].location);
+                data.entry_data.LocationsPage[0].graphql && 
+                data.entry_data.LocationsPage[0].graphql.location) {
+                resolve(data.entry_data.LocationsPage[0].graphql.location);
             }
             else {
                 reject(new Error('Error scraping location page "' + id + '"'));
