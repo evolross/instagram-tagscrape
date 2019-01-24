@@ -1,194 +1,307 @@
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7 not-logged-in client-root"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8 not-logged-in client-root"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9 not-logged-in client-root"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js not-logged-in client-root"> <!--<![endif]-->
-    <head><meta charset="utf-8">
+<html lang="en" class="no-js not-logged-in client-root">
+    <head>
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>
-Instagram
+Joke Hertogen on Instagram: “#bocagrandi #nofilter #aruba #arubaonehappyisland #kitesurfing #sea #kite”
 </title>
 
         
         <meta name="robots" content="noimageindex, noarchive">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="theme-color" content="#000000">
-        <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        
-
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
         <link rel="manifest" href="/data/manifest.json">
 
         
           <link href="https://graph.instagram.com" rel="preconnect" crossorigin>
         
 
-        <link rel="preload" href="/static/bundles/en_US_PostPageContainer.js/7171cc57a805.js" as="script" type="text/javascript" crossorigin="anonymous" />
+        <link rel="preload" href="/static/bundles/metro/PostPageContainer.js/4cd577031b1e.js" as="script" type="text/javascript" crossorigin="anonymous" />
+        
 
         <script type="text/javascript">
         (function() {
-            var docElement = document.documentElement;
-            var classRE = new RegExp('(^|\\s)no-js(\\s|$)');
-            var className = docElement.className;
-            docElement.className = className.replace(classRE, '$1js$2');
-        })();
-        </script>
+  var docElement = document.documentElement;
+  var classRE = new RegExp('(^|\\s)no-js(\\s|$)');
+  var className = docElement.className;
+  docElement.className = className.replace(classRE, '$1js$2');
+})();
+</script>
         <script type="text/javascript">
-        (function() {
-          if ('PerformanceObserver' in window && 'PerformancePaintTiming' in window) {
-            window.__bufferedPerformance = [];
-            var ob = new PerformanceObserver(function(e) {
-              window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());
-            });
-            ob.observe({entryTypes:['paint']});
-          }
-        })();
-        </script>
+(function() {
+  
+  if ('PerformanceObserver' in window && 'PerformancePaintTiming' in window) {
+    window.__bufferedPerformance = [];
+    var ob = new PerformanceObserver(function(e) {
+      window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());
+    });
+    ob.observe({entryTypes:['paint']});
+  }
+  window.__bufferedErrors = [];
+  window.onerror = function(message, url, line, column, error) {
+    window.__bufferedErrors.push({
+      message: message,
+      url: url,
+      line: line,
+      column: column,
+      error: error
+    });
+    return false;
+  };
+  window.__initialData = {
+    pending: true,
+    waiting: []
+  };
+  function notifyLoaded(item, data) {
+    item.pending = false;
+    item.data = data;
+    for (var i = 0;i < item.waiting.length; ++i) {
+      item.waiting[i].resolve(item.data);
+    }
+    item.waiting = [];
+  }
+  function notifyError(item, msg) {
+    item.pending = false;
+    item.error = new Error(msg);
+    for (var i = 0;i < item.waiting.length; ++i) {
+      item.waiting[i].reject(item.error);
+    }
+    item.waiting = [];
+  }
+  window.__initialDataLoaded = function(initialData) {
+    notifyLoaded(window.__initialData, initialData);
+  };
+  window.__initialDataError = function(msg) {
+    notifyError(window.__initialData, msg);
+  };
+  window.__additionalData = {};
+  window.__pendingAdditionalData = function(paths) {
+    for (var i = 0;i < paths.length; ++i) {
+      window.__additionalData[paths[i]] = {
+        pending: true,
+        waiting: []
+      };
+    }
+  };
+  window.__additionalDataLoaded = function(path, data) {
+    if (path in window.__additionalData) {
+      notifyLoaded(window.__additionalData[path], data);
+    } else {
+      console.error('Unexpected additional data loaded "' + path + '"');
+    }
+  };
+  window.__additionalDataError = function(path, msg) {
+    if (path in window.__additionalData) {
+      notifyError(window.__additionalData[path], msg);
+    } else {
+      console.error('Unexpected additional data encountered an error "' + path + '": ' + msg);
+    }
+  };
+})();
+</script><script type="text/javascript">
+
+/*
+ Copyright 2018 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+(function(){function g(a,c){b||(b=a,f=c,h.forEach(function(a){removeEventListener(a,l,e)}),m())}function m(){b&&f&&0<d.length&&(d.forEach(function(a){a(b,f)}),d=[])}function n(a,c){function k(){g(a,c);d()}function b(){d()}function d(){removeEventListener("pointerup",k,e);removeEventListener("pointercancel",b,e)}addEventListener("pointerup",k,e);addEventListener("pointercancel",b,e)}function l(a){if(a.cancelable){var c=performance.now(),b=a.timeStamp;b>c&&(c=+new Date);c-=b;"pointerdown"==a.type?n(c,
+a):g(c,a)}}var e={passive:!0,capture:!0},h=["click","mousedown","keydown","touchstart","pointerdown"],b,f,d=[];h.forEach(function(a){addEventListener(a,l,e)});window.perfMetrics=window.perfMetrics||{};window.perfMetrics.onFirstInputDelay=function(a){d.push(a);m()}})();
+</script>
     
-                <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/932e4d9af891.png">
-                <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/004705c9353f.png">
-                <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/82467bc9bcce.png">
-                <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/515cb4eeeeee.png">
-                <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/94fd767f257b.png">
+                <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/4272e394f5ad.png">
+                <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/02ba5abf9861.png">
+                <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/419a6f9c7454.png">
+                <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/a24e58112f06.png">
+                <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/85a358fb3b7d.png">
                 
-                    <link rel="icon" sizes="192x192" href="/static/images/ico/favicon-192.png/b407fa101800.png">
+                    <link rel="icon" sizes="192x192" href="/static/images/ico/favicon-192.png/68d99ba29cc8.png">
                 
             
             
-                    <link rel="mask-icon" href="/static/images/ico/favicon.svg/9d8680ab8a3c.svg" color="#262626">
+                    <link rel="mask-icon" href="/static/images/ico/favicon.svg/fc72dd4bfde8.svg" color="#262626">
                   
-                  <link rel="shortcut icon" type="image/x-icon" href="/static/images/ico/favicon.ico/dfa85bb1fd63.ico">
+                  <link rel="shortcut icon" type="image/x-icon" href="/static/images/ico/favicon.ico/36b3ee2d91ed.ico">
                 
             
             
             
     
-    
-    <link rel="canonical" href="https://www.instagram.com/p/BMmWPcBhGAv/" />
-    <meta content="45 Likes, 1 Comments - Studentersamfunnet i Bergen (@samfunnet) on Instagram: “It was the best night. A lot of people said so! Foto: @studvest / Ingrid Kvåle Faleide #samfUSA…”" name="description" />
+    <link rel="canonical" href="https://www.instagram.com/travellingwith3kids/p/BtAArksHPrV/" />
+    <meta content="9 Likes, 0 Comments - Joke Hertogen (@travellingwith3kids) on Instagram: “#bocagrandi #nofilter #aruba #arubaonehappyisland #kitesurfing #sea #kite”" name="description" />
     <meta property="og:site_name" content="Instagram" />
-    <meta property="og:title" content="Instagram post by Studentersamfunnet i Bergen • Nov 9, 2016 at 6:18pm UTC" />
-    <meta property="og:image" content="https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/15034513_1142863315797740_1888700774515474432_n.jpg" />
-    <meta property="og:description" content="45 Likes, 1 Comments - Studentersamfunnet i Bergen (@samfunnet) on Instagram: “It was the best night. A lot of people said so! Foto: @studvest / Ingrid Kvåle Faleide #samfUSA…”" />
+    <meta property="og:title" content="Joke Hertogen on Instagram: “#bocagrandi #nofilter #aruba #arubaonehappyisland #kitesurfing #sea #kite”" />
+    <meta property="og:image" content="https://scontent-sjc3-1.cdninstagram.com/vp/23924304b3398fd52d1a1fcc3dbc7b0d/5CFA5F7D/t51.2885-15/e35/49770274_2217325238484664_5514149333828236492_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com" />
+    <meta property="og:description" content="9 Likes, 0 Comments - Joke Hertogen (@travellingwith3kids) on Instagram: “#bocagrandi #nofilter #aruba #arubaonehappyisland #kitesurfing #sea #kite”" />
     <meta property="fb:app_id" content="124024574287414" />
-    <meta property="og:url" content="https://www.instagram.com/p/BMmWPcBhGAv/" />
-    <meta property="instapp:owner_user_id" content="290309294" />
+    <meta property="og:url" content="https://www.instagram.com/p/BtAArksHPrV/" />
+    <meta property="instapp:owner_user_id" content="24608269" />
     <meta property="al:ios:app_name" content="Instagram" />
     <meta property="al:ios:app_store_id" content="389801252" />
-    <meta property="al:ios:url" content="instagram://media?id=1379888153741254703" />
+    <meta property="al:ios:url" content="instagram://media?id=1963572431865838293" />
     <meta property="al:android:app_name" content="Instagram" />
     <meta property="al:android:package" content="com.instagram.android" />
-    <meta property="al:android:url" content="https://www.instagram.com/p/BMmWPcBhGAv/" />
+    <meta property="al:android:url" content="https://www.instagram.com/p/BtAArksHPrV/" />
     
     <meta name="medium" content="image" />
     <meta property="og:type" content="instapp:photo" />
-    <meta property="instapp:hashtags" content="nrkvalg" /><meta property="instapp:hashtags" content="valgvake" /><meta property="instapp:hashtags" content="election2016" /><meta property="instapp:hashtags" content="samfusa" />
+    <meta property="instapp:hashtags" content="arubaonehappyisland" /><meta property="instapp:hashtags" content="sea" /><meta property="instapp:hashtags" content="kite" /><meta property="instapp:hashtags" content="nofilter" /><meta property="instapp:hashtags" content="bocagrandi" /><meta property="instapp:hashtags" content="aruba" /><meta property="instapp:hashtags" content="kitesurfing" />
 
-    <link rel="alternate" href="android-app://com.instagram.android/https/instagram.com/p/BMmWPcBhGAv/" />
+    <link rel="alternate" href="android-app://com.instagram.android/https/instagram.com/p/BtAArksHPrV/" />
     
-    <link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/" hreflang="x-default" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=en" hreflang="en" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=fr" hreflang="fr" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=it" hreflang="it" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=de" hreflang="de" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es" hreflang="es" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=zh-cn" hreflang="zh-cn" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=zh-tw" hreflang="zh-tw" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ja" hreflang="ja" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ko" hreflang="ko" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=pt" hreflang="pt" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=pt-br" hreflang="pt-br" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=af" hreflang="af" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=cs" hreflang="cs" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=da" hreflang="da" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=el" hreflang="el" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=fi" hreflang="fi" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=hr" hreflang="hr" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=hu" hreflang="hu" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=id" hreflang="id" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ms" hreflang="ms" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=nb" hreflang="nb" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=nl" hreflang="nl" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=pl" hreflang="pl" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ru" hreflang="ru" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=sk" hreflang="sk" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=sv" hreflang="sv" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=th" hreflang="th" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=tl" hreflang="tl" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=tr" hreflang="tr" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=hi" hreflang="hi" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=bn" hreflang="bn" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=gu" hreflang="gu" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=kn" hreflang="kn" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ml" hreflang="ml" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=mr" hreflang="mr" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=pa" hreflang="pa" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ta" hreflang="ta" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=te" hreflang="te" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ne" hreflang="ne" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=si" hreflang="si" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ur" hreflang="ur" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=vi" hreflang="vi" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=bg" hreflang="bg" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=fr-ca" hreflang="fr-ca" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=ro" hreflang="ro" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=sr" hreflang="sr" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=uk" hreflang="uk" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=zh-hk" hreflang="zh-hk" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-gt" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-pr" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-cr" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-pe" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-ve" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-hn" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-mx" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-ec" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-ni" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-ar" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-co" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-pa" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-cl" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-bo" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-cu" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-py" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-sv" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-do" />
-<link rel="alternate" href="https://www.instagram.com/p/BMmWPcBhGAv/?hl=es-la" hreflang="es-uy" />
-    
+            <script type="application/ld+json">
+                {"@context":"http:\/\/schema.org","@type":"ImageObject","caption":"#bocagrandi #nofilter #aruba #arubaonehappyisland #kitesurfing #sea #kite","representativeOfPage":"http:\/\/schema.org\/True","uploadDate":"2019-01-24T02:14:56","author":{"@type":"Person","alternateName":"@travellingwith3kids","mainEntityofPage":{"@type":"ProfilePage","@id":"https:\/\/www.instagram.com\/travellingwith3kids\/"}},"commentCount":"0","contentLocation":{"@type":"Place","name":"Aruba","mainEntityofPage":{"@type":"CollectionPage","@id":"https:\/\/www.instagram.com\/explore\/locations\/218013238\/aruba\/"},"address":{"@type":"PostalAddress","addressLocality":"Oranjestad, Aruba","addressCountry":{"@type":"Country","name":"AW"}}},"interactionStatistic":{"@type":"InteractionCounter","interactionType":{"@type":"LikeAction"},"userInteractionCount":"9"},"mainEntityofPage":{"@type":"ItemPage","@id":"https:\/\/www.instagram.com\/p\/BtAArksHPrV\/"},"description":"9 Likes, 0 Comments - Joke Hertogen (@travellingwith3kids) on Instagram: \u201c#bocagrandi #nofilter #aruba #arubaonehappyisland #kitesurfing #sea #kite\u201d","name":"Joke Hertogen on Instagram: \u201c#bocagrandi #nofilter #aruba #arubaonehappyisland #kitesurfing #sea #kite\u201d"}
+            </script>
+        
+    <link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/" hreflang="x-default" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=en" hreflang="en" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=fr" hreflang="fr" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=it" hreflang="it" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=de" hreflang="de" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es" hreflang="es" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=zh-cn" hreflang="zh-cn" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=zh-tw" hreflang="zh-tw" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ja" hreflang="ja" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ko" hreflang="ko" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=pt" hreflang="pt" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=pt-br" hreflang="pt-br" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=af" hreflang="af" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=cs" hreflang="cs" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=da" hreflang="da" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=el" hreflang="el" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=fi" hreflang="fi" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=hr" hreflang="hr" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=hu" hreflang="hu" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=id" hreflang="id" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ms" hreflang="ms" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=nb" hreflang="nb" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=nl" hreflang="nl" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=pl" hreflang="pl" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ru" hreflang="ru" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=sk" hreflang="sk" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=sv" hreflang="sv" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=th" hreflang="th" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=tl" hreflang="tl" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=tr" hreflang="tr" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=hi" hreflang="hi" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=bn" hreflang="bn" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=gu" hreflang="gu" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=kn" hreflang="kn" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ml" hreflang="ml" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=mr" hreflang="mr" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=pa" hreflang="pa" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ta" hreflang="ta" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=te" hreflang="te" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ne" hreflang="ne" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=si" hreflang="si" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ur" hreflang="ur" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=vi" hreflang="vi" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=bg" hreflang="bg" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=fr-ca" hreflang="fr-ca" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=ro" hreflang="ro" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=sr" hreflang="sr" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=uk" hreflang="uk" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=zh-hk" hreflang="zh-hk" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-cu" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-cl" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-do" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-hn" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-pr" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-pe" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-sv" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-uy" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-mx" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-ni" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-pa" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-ve" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-co" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-py" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-gt" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-ec" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-ar" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-bo" />
+<link rel="alternate" href="https://www.instagram.com/p/BtAArksHPrV/?hl=es-la" hreflang="es-cr" />
 </head>
     <body class="">
         
-    <span id="react-root"></span>
+    <span id="react-root"><svg width="50" height="50" viewBox="0 0 50 50" style="position:absolute;top:50%;left:50%;margin:-25px 0 0 -25px;fill:#c7c7c7"><path d="M25 1c-6.52 0-7.34.03-9.9.14-2.55.12-4.3.53-5.82 1.12a11.76 11.76 0 0 0-4.25 2.77 11.76 11.76 0 0 0-2.77 4.25c-.6 1.52-1 3.27-1.12 5.82C1.03 17.66 1 18.48 1 25c0 6.5.03 7.33.14 9.88.12 2.56.53 4.3 1.12 5.83a11.76 11.76 0 0 0 2.77 4.25 11.76 11.76 0 0 0 4.25 2.77c1.52.59 3.27 1 5.82 1.11 2.56.12 3.38.14 9.9.14 6.5 0 7.33-.02 9.88-.14 2.56-.12 4.3-.52 5.83-1.11a11.76 11.76 0 0 0 4.25-2.77 11.76 11.76 0 0 0 2.77-4.25c.59-1.53 1-3.27 1.11-5.83.12-2.55.14-3.37.14-9.89 0-6.51-.02-7.33-.14-9.89-.12-2.55-.52-4.3-1.11-5.82a11.76 11.76 0 0 0-2.77-4.25 11.76 11.76 0 0 0-4.25-2.77c-1.53-.6-3.27-1-5.83-1.12A170.2 170.2 0 0 0 25 1zm0 4.32c6.4 0 7.16.03 9.69.14 2.34.11 3.6.5 4.45.83 1.12.43 1.92.95 2.76 1.8a7.43 7.43 0 0 1 1.8 2.75c.32.85.72 2.12.82 4.46.12 2.53.14 3.29.14 9.7 0 6.4-.02 7.16-.14 9.69-.1 2.34-.5 3.6-.82 4.45a7.43 7.43 0 0 1-1.8 2.76 7.43 7.43 0 0 1-2.76 1.8c-.84.32-2.11.72-4.45.82-2.53.12-3.3.14-9.7.14-6.4 0-7.16-.02-9.7-.14-2.33-.1-3.6-.5-4.45-.82a7.43 7.43 0 0 1-2.76-1.8 7.43 7.43 0 0 1-1.8-2.76c-.32-.84-.71-2.11-.82-4.45a166.5 166.5 0 0 1-.14-9.7c0-6.4.03-7.16.14-9.7.11-2.33.5-3.6.83-4.45a7.43 7.43 0 0 1 1.8-2.76 7.43 7.43 0 0 1 2.75-1.8c.85-.32 2.12-.71 4.46-.82 2.53-.11 3.29-.14 9.7-.14zm0 7.35a12.32 12.32 0 1 0 0 24.64 12.32 12.32 0 0 0 0-24.64zM25 33a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm15.68-20.8a2.88 2.88 0 1 0-5.76 0 2.88 2.88 0 0 0 5.76 0z"/></svg></span>
 
         
 
+
         
-            <script type="text/javascript">window._sharedData = {"activity_counts": null, "config": {"csrf_token": "nxUITVgRXhbgjjCFdYIY1lMpQmeeiDCC", "viewer": null}, "country_code": "US", "language_code": "en", "entry_data": {"PostPage": [{"graphql": {"shortcode_media": {"__typename": "GraphImage", "id": "1379888153741254703", "shortcode": "BMmWPcBhGAv", "dimensions": {"height": 640, "width": 640}, "gating_info": null, "media_preview": "ACoqy4iAcntVyIm4fb39T/hVeWDYx52jt9KlsphCx3Dr0I5/yO9DkpS5u2x0wahFwa1dzUNoY1ODkkg+nIz0+uaLeQPISCD06c1G92kylexxg9M81AYVRt+CF4+Ycfyxmpk/PUhL7h6ffcDs4/mae2MnkdfUVXlkVyzN/D0wME89/U49arm9GeEwK3lZWd1qrkx8ydG80/MAwx36VVeIwPvX5gCcAemP8/hQXeOIsoOCRlu30qBJGyCASBz34z/jXKloaSauaksZkhXAVTgHPfnrmqKzMrFc5UZx/jWykJYDeckDp0A7Ae/pmqlxZDPmockclfp6f4d6GvuFcqOpkG9Ttb09cf4frVxI5WUEhckA9/8AGsh5CTxwKUXLjgE/mapeevbyJb7aFyO63KsT/wCrB/zmpBFslCr91jkey9f1wB9Kzo6vW5PP+6a1kktjNO+5rtMoTK/xDOf8+n86reZtXd9Sf1p046D0A/kKryf6o/7prJ7FIxGGTx3p3lH2p0XQ/T+oqeqQmf/Z", "display_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/15034513_1142863315797740_1888700774515474432_n.jpg", "display_resources": [{"src": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/15034513_1142863315797740_1888700774515474432_n.jpg", "config_width": 640, "config_height": 640}, {"src": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/15034513_1142863315797740_1888700774515474432_n.jpg", "config_width": 750, "config_height": 750}, {"src": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-15/e35/15034513_1142863315797740_1888700774515474432_n.jpg", "config_width": 1080, "config_height": 1080}], "is_video": false, "should_log_client_event": false, "tracking_token": "eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjpmYWxzZSwidXVpZCI6ImU3NzAwNGEyMGZkYzRjNjg5YzZjZTNmZmNiMTM0ZDk4MTM3OTg4ODE1Mzc0MTI1NDcwMyJ9LCJzaWduYXR1cmUiOiIifQ==", "edge_media_to_tagged_user": {"edges": [{"node": {"user": {"username": "kvarteretbergen"}, "x": 0.7626666666666667, "y": 0.5973333333333334}}, {"node": {"user": {"username": "studvest"}, "x": 0.7453333333333333, "y": 0.3466666666666667}}, {"node": {"user": {"username": "studentradio"}, "x": 0.464, "y": 0.4466666666666667}}, {"node": {"user": {"username": "samfunnet"}, "x": 0.8026666666666666, "y": 0.4533333333333333}}]}, "edge_media_to_caption": {"edges": [{"node": {"text": "It was the best night. A lot of people said so! Foto: @studvest / Ingrid Kv\u00e5le Faleide #samfUSA #election2016 #nrkvalg #valgvake"}}]}, "caption_is_edited": false, "edge_media_to_comment": {"count": 0, "page_info": {"has_next_page": false, "end_cursor": null}, "edges": []}, "comments_disabled": false, "taken_at_timestamp": 1478715508, "edge_media_preview_like": {"count": 45, "edges": [{"node": {"id": "522211126", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11379305_1601562763415934_194356462_a.jpg", "username": "arabaren"}}, {"node": {"id": "43006470", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/18879797_299221717197538_515367303534084096_a.jpg", "username": "mialf"}}, {"node": {"id": "348529283", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/12501463_969545613093028_2055169641_a.jpg", "username": "schlichtjulian"}}, {"node": {"id": "2860302033", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/14717627_554471364757103_4556557836850561024_a.jpg", "username": "batterietvestnorge"}}, {"node": {"id": "186129177", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/11820658_715262161913749_1112009959_a.jpg", "username": "lebiiiko"}}, {"node": {"id": "304130932", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/18444152_161199861080663_354348081958879232_a.jpg", "username": "fiskeingrid"}}, {"node": {"id": "16514567", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/21984555_1737433059895525_3037200567341416448_n.jpg", "username": "benedictedesiree"}}, {"node": {"id": "9223719", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/15337150_615007162026655_4494064061239001088_a.jpg", "username": "kjernekaren"}}, {"node": {"id": "290309294", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/12142169_451426771708101_1923374416_a.jpg", "username": "samfunnet"}}, {"node": {"id": "4421792", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/11373805_1126301930730906_917625743_a.jpg", "username": "jonasnikolaisen"}}]}, "edge_media_to_sponsor_user": {"edges": []}, "location": {"id": "542401", "has_public_page": true, "name": "Det Akademiske Kvarter", "slug": "det-akademiske-kvarter"}, "viewer_has_liked": false, "viewer_has_saved": false, "viewer_has_saved_to_collection": false, "owner": {"id": "290309294", "profile_pic_url": "https://scontent-sjc2-1.cdninstagram.com/t51.2885-19/s150x150/12142169_451426771708101_1923374416_a.jpg", "username": "samfunnet", "blocked_by_viewer": false, "followed_by_viewer": false, "full_name": "Studentersamfunnet i Bergen", "has_blocked_viewer": false, "is_private": false, "is_unpublished": false, "is_verified": false, "requested_by_viewer": false}, "is_ad": false, "edge_web_media_to_related_media": {"edges": []}}}}]}, "gatekeepers": {"bn": true, "ld": true, "nr": true, "pl": true}, "qe": {"dash_for_vod": {"g": "", "p": {}}, "ebd": {"g": "", "p": {}}, "bc3l": {"g": "", "p": {}}, "aysf": {"g": "", "p": {}}, "notif": {"g": "", "p": {}}, "create_upsell": {"g": "", "p": {}}, "feed": {"g": "", "p": {}}, "follow_button": {"g": "", "p": {}}, "login_via_signup_page": {"g": "control", "p": {"is_enabled": "false"}}, "loggedout": {"g": "", "p": {}}, "stories": {"g": "", "p": {}}, "su_universe": {"g": "", "p": {}}, "us": {"g": "", "p": {}}, "us_li": {"g": "", "p": {}}, "nav": {"g": "", "p": {}}, "nav_lo": {"g": "", "p": {}}, "deact": {"g": "", "p": {}}, "sidecar": {"g": "", "p": {}}, "video": {"g": "", "p": {}}, "filters": {"g": "", "p": {}}, "typeahead": {"g": "", "p": {}}, "appsell": {"g": "", "p": {}}, "save": {"g": "", "p": {}}, "stale": {"g": "", "p": {}}, "reg": {"g": "", "p": {}}, "reg_vp": {"g": "control_group_2", "p": {"hide_value_prop": "false"}}, "nux": {"g": "", "p": {}}, "prof_pic_upsell": {"g": "", "p": {}}, "prof_pic_creation": {"g": "", "p": {}}, "onetaplogin": {"g": "test", "p": {"enabled": "true"}}, "feed_vp": {"g": "", "p": {}}, "push_notifications": {"g": "", "p": {}}, "login_poe": {"g": "", "p": {}}, "feed_perf": {"g": "", "p": {}}, "prefetch": {"g": "", "p": {}}, "report_haf": {"g": "", "p": {}}, "report_category_reorder": {"g": "", "p": {}}, "a2hs": {"g": "", "p": {}}, "bg_sync": {"g": "", "p": {}}, "disc_ppl": {"g": "", "p": {}}, "ebdsim_li": {"g": "", "p": {}}}, "hostname": "www.instagram.com", "display_properties_server_guess": {"pixel_ratio": 1.0, "viewport_width": 1503, "viewport_height": 1110, "orientation": "landscape-primary"}, "environment_switcher_visible_server_guess": true, "platform": "web", "nonce": "dirXIDckaOuxU9otKQtecA==", "zero_data": {}, "rollout_hash": "849768ee6809", "probably_has_app": false, "show_app_install": true};</script>
+            <script type="text/javascript">window._sharedData = {"config":{"csrf_token":"QuQbUQm5ghuNgyXhABVOWPq5gKLpzEnD","viewer":null,"viewerId":null},"supports_es6":true,"country_code":"US","language_code":"en","locale":"en_US","entry_data":{"PostPage":[{"graphql":{"shortcode_media":{"__typename":"GraphImage","id":"1963572431865838293","shortcode":"BtAArksHPrV","dimensions":{"height":810,"width":1080},"gating_info":null,"media_preview":"ACof0VFPKmnjFGAeuTVCIyKaUzUjRgjvUiqB60AVDE3pUew1ePt+tRc+1AFEQt3JH/Aqdjb/ABk/8CP9M0wKrc/ePqakGB04pXCwF2zgFj9M/wBaD5jf3vx4/rSh6d5hpXHYj2uR1I/E0za3r+pqUuTTc0rjsf/Z","display_url":"https://scontent-sjc3-1.cdninstagram.com/vp/23924304b3398fd52d1a1fcc3dbc7b0d/5CFA5F7D/t51.2885-15/e35/49770274_2217325238484664_5514149333828236492_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com","display_resources":[{"src":"https://scontent-sjc3-1.cdninstagram.com/vp/4e80066141dae317e132c738a5afa91b/5CC47AC7/t51.2885-15/sh0.08/e35/s640x640/49770274_2217325238484664_5514149333828236492_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com","config_width":640,"config_height":480},{"src":"https://scontent-sjc3-1.cdninstagram.com/vp/c6cbdd466d1a5f79dbf9ddbaea373b7f/5CF88403/t51.2885-15/sh0.08/e35/s750x750/49770274_2217325238484664_5514149333828236492_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com","config_width":750,"config_height":562},{"src":"https://scontent-sjc3-1.cdninstagram.com/vp/23924304b3398fd52d1a1fcc3dbc7b0d/5CFA5F7D/t51.2885-15/e35/49770274_2217325238484664_5514149333828236492_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com","config_width":1080,"config_height":810}],"accessibility_caption":"Image may contain: ocean, sky, cloud, water, outdoor and nature","is_video":false,"should_log_client_event":false,"tracking_token":"eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjpmYWxzZSwidXVpZCI6IjBkNzZkNTY4ZGViZjRlYjI4Mjc0MmYxMDU1ZGZiZGZkMTk2MzU3MjQzMTg2NTgzODI5MyJ9LCJzaWduYXR1cmUiOiIifQ==","edge_media_to_tagged_user":{"edges":[]},"edge_media_to_caption":{"edges":[{"node":{"text":"#bocagrandi #nofilter #aruba #arubaonehappyisland #kitesurfing #sea #kite"}}]},"caption_is_edited":false,"has_ranked_comments":false,"edge_media_to_comment":{"count":0,"page_info":{"has_next_page":false,"end_cursor":null},"edges":[]},"comments_disabled":false,"taken_at_timestamp":1548296096,"edge_media_preview_like":{"count":9,"edges":[]},"edge_media_to_sponsor_user":{"edges":[]},"location":{"id":"218013238","has_public_page":true,"name":"Aruba","slug":"aruba","address_json":"{\"street_address\": \"\", \"zip_code\": \"\", \"city_name\": \"Oranjestad, Aruba\", \"region_name\": \"\", \"country_code\": \"AW\", \"exact_city_match\": false, \"exact_region_match\": false, \"exact_country_match\": false}"},"viewer_has_liked":false,"viewer_has_saved":false,"viewer_has_saved_to_collection":false,"viewer_in_photo_of_you":false,"viewer_can_reshare":true,"owner":{"id":"24608269","is_verified":false,"profile_pic_url":"https://scontent-sjc3-1.cdninstagram.com/vp/22c85172e74c56d6973d2088192e86a4/5CE6E51C/t51.2885-19/s150x150/13737101_1622910304667653_487986935_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com","username":"travellingwith3kids","blocked_by_viewer":false,"followed_by_viewer":false,"full_name":"Joke Hertogen","has_blocked_viewer":false,"is_private":false,"is_unpublished":false,"requested_by_viewer":false},"is_ad":false,"edge_web_media_to_related_media":{"edges":[]}}}}]},"gatekeepers":{"seo":true,"seoht":true,"phone_qp":true,"nt":true,"rp":true,"daid":true,"frx":true,"oba":true,"hpi":true},"knobs":{"acct:ntb":0,"cb":0,"captcha":0,"fr":0},"qe":{"fsu_count":{"g":"","p":{}},"iab":{"g":"","p":{}},"app_upsell":{"g":"","p":{}},"profile_header_name":{"g":"","p":{}},"bc3l":{"g":"","p":{}},"direct_conversation_reporting":{"g":"","p":{}},"frx_reporting":{"g":"","p":{}},"general_reporting":{"g":"","p":{}},"reporting":{"g":"","p":{}},"acc_recovery_link":{"g":"","p":{}},"notif":{"g":"","p":{}},"mobile_stories_doodling":{"g":"","p":{}},"show_copy_link":{"g":"","p":{}},"p_edit":{"g":"","p":{}},"404_as_react":{"g":"","p":{}},"acc_recovery":{"g":"","p":{}},"collections":{"g":"","p":{}},"comment_ta":{"g":"","p":{}},"su":{"g":"","p":{}},"ebd_ul":{"g":"","p":{}},"ebdsim_li":{"g":"","p":{}},"ebdsim_lo":{"g":"","p":{}},"empty_feed":{"g":"","p":{}},"appsell":{"g":"","p":{}},"heart_tab":{"g":"","p":{}},"follow_button":{"g":"","p":{}},"log_cont":{"g":"control_intent_m","p":{"has_contextual_m":"false"}},"msisdn":{"g":"","p":{}},"onetaplogin":{"g":"default_opt_in","p":{"during_reg":"true","default_value":"true","storage_version":"one_tap_storage_version"}},"profile_tabs":{"g":"","p":{}},"em_sig":{"g":"control_no_sug","p":{"has_multi_step_email_prefill":"false","has_multi_step_email_prefill_leven":"false"}},"multireg_iter":{"g":"","p":{}},"reg_vp":{"g":"","p":{}},"report_media":{"g":"","p":{}},"report_profile":{"g":"","p":{}},"sidecar_swipe":{"g":"","p":{}},"su_universe":{"g":"","p":{}},"stale":{"g":"","p":{}},"tp_pblshr":{"g":"","p":{}},"video":{"g":"","p":{}},"felix":{"g":"","p":{}},"felix_clear_fb_cookie":{"g":"","p":{}},"felix_creation_duration_limits":{"g":"","p":{}},"felix_creation_enabled":{"g":"","p":{}},"felix_creation_fb_crossposting":{"g":"","p":{}},"felix_creation_fb_crossposting_v2":{"g":"","p":{}},"felix_creation_validation":{"g":"","p":{}},"felix_creation_video_upload":{"g":"","p":{}},"felix_early_onboarding":{"g":"","p":{}},"unfollow_confirm":{"g":"","p":{}},"profile_enhance_li":{"g":"","p":{}},"profile_enhance_lo":{"g":"","p":{}},"comment_enhance":{"g":"","p":{}},"mweb_topical_explore":{"g":"","p":{}},"follow_all_fb":{"g":"","p":{}},"lite_direct_upsell":{"g":"","p":{}},"web_loggedout_noop":{"g":"","p":{}},"a2hs_heuristic_uc":{"g":"","p":{}},"a2hs_heuristic_non_uc":{"g":"","p":{}},"web_hashtag":{"g":"","p":{}},"web_hashtag_logged_out":{"g":"","p":{}},"header_scroll":{"g":"","p":{}},"rout":{"g":"","p":{}},"web_lo_follow":{"g":"","p":{}},"web_share":{"g":"","p":{}},"lite_rating":{"g":"","p":{}},"web_embeds_share":{"g":"","p":{}},"web_share_lo":{"g":"","p":{}},"web_embeds_logged_out":{"g":"control_comment_input","p":{"show_comment_input":"false"}},"web_datasaver_mode":{"g":"","p":{}},"lite_datasaver_mode":{"g":"","p":{}},"lite_video_upload":{"g":"","p":{}},"post_options":{"g":"","p":{}},"igtv_public_viewing":{"g":"","p":{}},"caching":{"g":"","p":{}},"nux":{"g":"","p":{}},"hpi":{"g":"","p":{}},"iglmsr":{"g":"multi_reg","p":{"has_multi_step_registration":"true","has_prefill":"false"}},"igwsvl":{"g":"","p":{}},"iglcp":{"g":"control","p":{"has_login_prefill":"false"}},"lite_story_video_upload":{"g":"","p":{}},"iglscioi":{"g":"","p":{}},"ws2":{"g":"","p":{}},"wpn":{"g":"","p":{}},"hc":{"g":"","p":{}},"lite_user_tag_creation":{"g":"","p":{}},"iglcius":{"g":"","p":{}}},"hostname":"www.instagram.com","deployment_stage":"c2","platform":"web","rhx_gis":"74712cc9810e964fa1135dfcfa581ffb","nonce":"0VguhaF2xCOWZdg0y9BHoQ==","mid_pct":88.93083,"server_checks":{},"zero_data":{},"rollout_hash":"d4b248b92dbb","bundle_variant":"metro","probably_has_app":false};</script>
+<script type="text/javascript">window.__initialDataLoaded(window._sharedData);</script>
+<script type="text/javascript">var __DEV__=false,__BUNDLE_START_TIME__=this.nativePerformanceNow?nativePerformanceNow():Date.now(),process=this.process||{};process.env=process.env||{};process.env.NODE_ENV="production";!(function(r){"use strict";function e(){return f="number"==typeof __NUM_MODULES__?Array(0|__NUM_MODULES__):Object.create(null)}function t(r){var e=r,t=f[e];return t&&t.isInitialized?t.publicModule.exports:o(e,t)}function n(r){var e=r;if(f[e]&&f[e].importedDefault!==c)return f[e].importedDefault;var n=t(e),i=n&&n.__esModule?n.default:n;return f[e].importedDefault=i}function i(r){var e=r;if(f[e]&&f[e].importedAll!==c)return f[e].importedAll;var n,i=t(e);if(i&&i.__esModule)n=i;else{if(n={},i)for(var o in i)p.call(i,o)&&(n[o]=i[o]);n.default=i}return f[e].importedAll=n}function o(e,t){if(!s&&r.ErrorUtils){s=!0;var n;try{n=l(e,t)}catch(e){r.ErrorUtils.reportFatalError(e)}return s=!1,n}return l(e,t)}function u(r){return{segmentId:r>>>_,localId:r&v}}function l(e,o){!o&&r.__defineModule&&(r.__defineModule(e),o=f[e]);var l=r.nativeRequire;if(!o&&l){var c=u(e),p=c.segmentId;l(c.localId,p),o=f[e]}if(!o)throw a(e);if(o.hasError)throw d(e,o.error);o.isInitialized=!0;var s=o,_=s.factory,v=s.dependencyMap;try{var M=o.publicModule;if(M.id=e,h.length>0)for(var m=0;m<h.length;++m)h[m].cb(e,M);return _(r,t,n,i,M,M.exports,v),o.factory=void 0,o.dependencyMap=void 0,M.exports}catch(r){throw o.hasError=!0,o.error=r,o.isInitialized=!1,o.publicModule.exports=void 0,r}}function a(r){var e='Requiring unknown module "'+r+'".';return Error(e)}function d(r,e){var t=r;return Error('Requiring module "'+t+'", which threw an exception: '+e)}r.__r=t,r.__d=function(r,e,t){null==f[e]&&(f[e]={dependencyMap:t,factory:r,hasError:!1,importedAll:c,importedDefault:c,isInitialized:!1,publicModule:{exports:{}}})},r.__c=e;var f=e(),c={},p={}.hasOwnProperty;t.importDefault=n,t.importAll=i;var s=!1,_=16,v=65535;t.unpackModuleId=u,t.packModuleId=function(r){return(r.segmentId<<_)+r.localId};var h=[];t.registerHook=function(r){var e={cb:r};return h.push(e),{release:function(){for(var r=0;r<h.length;++r)if(h[r]===e){h.splice(r,1);break}}}}})('undefined'!=typeof global?global:'undefined'!=typeof window?window:this);
+__s={"15":"/static/bundles/metro/NotificationLandingPage.js/95f137b26f60.js","16":"/static/bundles/metro/Challenge.js/f8662cfd6022.js","17":"/static/bundles/metro/Consumer.js/145ec9c78155.js","19":"/static/bundles/metro/DirectMQTT.js/ae78d855782f.js","21":"/static/bundles/metro/DebugInfoNub.js/adcada2015a4.js","22":"/static/bundles/metro/NametagLandingPage.js/45060371925b.js","23":"/static/bundles/metro/OneTapUpsell.js/2e02a98a418f.js","24":"/static/bundles/metro/MobileDirectPage.js/7778f9bf5965.js","25":"/static/bundles/metro/OAuthPermissionsPage.js/58997086af9c.js","26":"/static/bundles/metro/IGTVVideoUploadPageContainer.js/a8367fe25ef1.js","27":"/static/bundles/metro/IGTVVideoDraftsPageContainer.js/ab06a9f3f232.js","28":"/static/bundles/metro/HttpErrorPage.js/e7f52ca17aab.js","29":"/static/bundles/metro/ProfilePageContainer.js/3a05d4f8fe0f.js","30":"/static/bundles/metro/PhoneConfirmPage.js/29cb27cdc953.js","31":"/static/bundles/metro/TagPageContainer.js/9fc80adb43a0.js","32":"/static/bundles/metro/DesktopStoriesPage.js/1bde051aaa70.js","33":"/static/bundles/metro/MobileStoriesPage.js/99bb588b1b11.js","34":"/static/bundles/metro/DesktopStoriesLoginPage.js/49f77f57fc7b.js","35":"/static/bundles/metro/MobileStoriesLoginPage.js/13ac9573a84d.js","36":"/static/bundles/metro/SuggestedDirectoryLandingPage.js/6f60e8714b34.js","37":"/static/bundles/metro/HashtagsDirectoryLandingPage.js/e5360d7a4147.js","38":"/static/bundles/metro/ProfilesDirectoryLandingPage.js/17638d35c646.js","39":"/static/bundles/metro/PostPageContainer.js/4cd577031b1e.js","40":"/static/bundles/metro/MediaChainingPageContainer.js/e60e66fcc9b2.js","41":"/static/bundles/metro/MobileAllCommentsPage.js/a995efc452cc.js","42":"/static/bundles/metro/ResetPasswordPageContainer.js/51bb747479f0.js","43":"/static/bundles/metro/LoginAndSignupPage.js/92f7dcd69169.js","44":"/static/bundles/metro/LocationsDirectoryLandingPage.js/7cd48970a5a8.js","45":"/static/bundles/metro/LocationPageContainer.js/b13e5949a129.js","46":"/static/bundles/metro/LocationsDirectoryCityPage.js/cc065acd589d.js","47":"/static/bundles/metro/LocationsDirectoryCountryPage.js/5fd76b1c767c.js","48":"/static/bundles/metro/LandingPage.js/5fc218f9cfc6.js","49":"/static/bundles/metro/SimilarAccountsPage.js/363296506d9c.js","50":"/static/bundles/metro/SimilarAccountsModal.js/40313b28b780.js","51":"/static/bundles/metro/FollowListPage.js/32dc9fc3403e.js","52":"/static/bundles/metro/FollowListModal.js/8f193da702c9.js","53":"/static/bundles/metro/FeedPageContainer.js/0f3c651af99e.js","54":"/static/bundles/metro/MultiStepSignupPage.js/cc25b585cab1.js","56":"/static/bundles/metro/FBSignupPage.js/ab64ff20f2f7.js","57":"/static/bundles/metro/EmailConfirmationPage.js/5771bfb65264.js","58":"/static/bundles/metro/UserCollectionMediaPageContainer.js/1c0c1012fb47.js","59":"/static/bundles/metro/UserCollectionsPageContainer.js/b2a9b572cb05.js","60":"/static/bundles/metro/DiscoverEmbedsPageContainer.js/0c1fd5ae82f0.js","61":"/static/bundles/metro/DiscoverPeoplePageContainer.js/c2268253168c.js","62":"/static/bundles/metro/DiscoverMediaPageContainer.js/ab8e89445ef2.js","63":"/static/bundles/metro/CommentLikedByListContainer.js/cebf9a066b05.js","64":"/static/bundles/metro/LikedByListContainer.js/4f6a361188af.js","65":"/static/bundles/metro/ExploreMediaPageContainer.js/e42a48b28b36.js","66":"/static/bundles/metro/StoryCreationPage.js/69cbd1dce3c2.js","67":"/static/bundles/metro/CreationModules.js/b9d01ac91a29.js","68":"/static/bundles/metro/ContactInvitesOptOutStatusPage.js/94dd21301d2b.js","69":"/static/bundles/metro/NewTermsConfirmPage.js/d6c42d0898c7.js","70":"/static/bundles/metro/TermsUnblockPage.js/d83a86b26dd8.js","71":"/static/bundles/metro/TermsAcceptPage.js/dcb499c1137b.js","72":"/static/bundles/metro/ParentalConsentNotParentPage.js/9307104dfae4.js","73":"/static/bundles/metro/ParentalConsentPage.js/1061142c7825.js","74":"/static/bundles/metro/ContactInvitesOptOutPage.js/cc35def1a4b2.js","75":"/static/bundles/metro/AccountRecoveryLandingPage.js/5d94f9e095ea.js","76":"/static/bundles/metro/CheckpointUnderageAppealPage.js/af8f0e8d24ea.js","77":"/static/bundles/metro/DataDownloadRequestConfirmPage.js/6081a82148ed.js","78":"/static/bundles/metro/DataDownloadRequestPage.js/cb4b8a74a69c.js","79":"/static/bundles/metro/DataControlsSupportPage.js/6041835124b3.js","80":"/static/bundles/metro/AndroidBetaPrivacyBugPage.js/a8ea2135f91f.js","81":"/static/bundles/metro/BlockedAccountsBugPage.js/8f05258d81a6.js","82":"/static/bundles/metro/PublicAccountNotMadePrivateBugPage.js/9bce0099a7a5.js","83":"/static/bundles/metro/PrivateAccountMadePublicBugPage.js/c36ac65fe766.js","84":"/static/bundles/metro/PlaintextPasswordBugPage.js/c2d44c27f900.js","85":"/static/bundles/metro/AccountPrivacyBugPage.js/d2fd93c786c4.js","86":"/static/bundles/metro/AccessToolViewAllPage.js/6c09d3845428.js","87":"/static/bundles/metro/AccessToolPage.js/7137977b6b44.js","88":"/static/bundles/metro/ContactHistoryPage.js/a549bd462a5c.js","89":"/static/bundles/metro/SettingsModules.js/4287b330b53d.js","90":"/static/bundles/metro/CameraPage.js/835266ee7bb2.js","91":"/static/bundles/metro/AdsSettingsPage.js/b7a91e732ea0.js","92":"/static/bundles/metro/ActivityFeedPage.js/c3385868f494.js","96":"/static/bundles/metro/EmbedRich.js/e7b05232be42.js","97":"/static/bundles/metro/EmbedAsyncLogger.js/f5e34c8f1bf2.js"}</script>
+<script type="text/javascript" src="/static/bundles/metro/Vendor.js/76e6e9ee11fb.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/bundles/metro/en_US.js/6064312003de.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/bundles/metro/ConsumerCommons.js/deadea120fbc.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/bundles/metro/Consumer.js/145ec9c78155.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/bundles/metro/PostPageContainer.js/4cd577031b1e.js" crossorigin="anonymous" charset="utf-8" async=""></script>
+
             
-            <script type="text/javascript" src="/static/bundles/Vendor.js/532fa4ed9783.js" crossorigin="anonymous"></script>
-<script type="text/javascript">!function(e){function n(o){if(a[o])return a[o].exports;var t=a[o]={i:o,l:!1,exports:{}};return e[o].call(t.exports,t,t.exports,n),t.l=!0,t.exports}var o=window.webpackJsonp;window.webpackJsonp=function(a,r,i){for(var c,f,s,u=0,d=[];u<a.length;u++)f=a[u],t[f]&&d.push(t[f][0]),t[f]=0;for(c in r)Object.prototype.hasOwnProperty.call(r,c)&&(e[c]=r[c]);for(o&&o(a,r,i);d.length;)d.shift()();if(i)for(u=0;u<i.length;u++)s=n(n.s=i[u]);return s};var a={},t={40:0};n.e=function(e){function o(){c.onerror=c.onload=null,clearTimeout(f);var n=t[e];0!==n&&(n&&n[1](new Error("Loading chunk "+e+" failed.")),t[e]=void 0)}var a=t[e];if(0===a)return new Promise(function(e){e()});if(a)return a[2];var r=new Promise(function(n,o){a=t[e]=[n,o]});a[2]=r;var i=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.charset="utf-8",c.async=!0,c.timeout=12e4,c.crossOrigin="anonymous",n.nc&&c.setAttribute("nonce",n.nc),c.src=n.p+"en_US_"+({0:"SettingsModules",1:"ProfilePageContainer",2:"LikedByListContainer",3:"FollowListContainer",4:"CreationModules",5:"LocationPageContainer",6:"DiscoverMediaPageContainer",7:"TagPageContainer",8:"BugNub",9:"FeedPageContainer",10:"PostPageContainer",11:"LandingPage",12:"LoginAndSignupPage",13:"ResetPasswordPageContainer",14:"DiscoverPeoplePageContainer",15:"MobileStoriesPage",16:"DesktopStoriesPage",17:"ContactHistoryPage",18:"LocationsDirectoryLandingPage",19:"LocationsDirectoryCountryPage",20:"LocationsDirectoryCityPage",21:"DirectoryPage",22:"ActivityFeedPage",23:"CameraPage",24:"StoryCreationPage",25:"NewUserInterstitial",26:"FBSignupPage",27:"Report",28:"Copyright",29:"Community",30:"SupportInfo",31:"GenericSurvey",32:"Challenge",33:"EmailSnoozePage",34:"EmailUnsubscribePage",35:"ConfirmFollowDialog",36:"Consumer",37:"NotificationLandingPage"}[e]||e)+".js/"+{0:"32fdcba49bbe",1:"2377368259f5",2:"1262bf45faef",3:"76ffd01699f0",4:"e19fa4d8af0a",5:"ea6bf36bfc6e",6:"e5a35333561b",7:"6570b97c3b0f",8:"32690045b91c",9:"61a0b0da03a3",10:"7171cc57a805",11:"1bd41cf2b693",12:"854f1ac20f9e",13:"c26240bb4591",14:"776bb51e5676",15:"23c16408247c",16:"457f15ff790e",17:"fa75742f4359",18:"9a847e4b0fcf",19:"a4630e05a5b2",20:"01a27908dd56",21:"9e44518668b5",22:"3c3899c3da4d",23:"2e4f77825a63",24:"c169f77e4552",25:"60507c36b680",26:"87c8a481a446",27:"95ac74c93f09",28:"40069e64637e",29:"7bbd8239e021",30:"fb4af7da5e7f",31:"fd86ca4b3227",32:"c2f41e800bda",33:"cf3feccef285",34:"2957703c4a10",35:"5d5c9375cbd3",36:"e640672138f5",37:"2de8f0f55ddb"}[e]+".js";var f=setTimeout(o,12e4);return c.onerror=c.onload=o,i.appendChild(c),r},n.m=e,n.c=a,n.d=function(e,o,a){n.o(e,o)||Object.defineProperty(e,o,{configurable:!1,enumerable:!0,get:a})},n.n=function(e){var o=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(o,"a",o),o},n.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},n.p="/static/bundles/",n.oe=function(e){throw console.error(e),e}}([]);</script>
-            <script type="text/javascript" src="/static/bundles/en_US_PostPageContainer.js/7171cc57a805.js" crossorigin="anonymous" charset="utf-8" async=""></script>
-<script type="text/javascript" src="/static/bundles/en_US_ConsumerCommons.js/59bef05048ca.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/static/bundles/en_US_Consumer.js/e640672138f5.js" crossorigin="anonymous"></script>
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '1425767024389221');
-
-fbq('track', 'PageView');
-
-
-</script>
-<noscript>
-
-
-</noscript>
-
         
+
+        <script type="text/javascript">
+(function(){
+  function normalizeError(err) {
+    var errorInfo = err.error || {};
+    var getConfigProp = function(propName, defaultValueIfNotTruthy) {
+      var propValue = window._sharedData && window._sharedData[propName];
+      return propValue ? propValue : defaultValueIfNotTruthy;
+    };
+    return {
+      line: err.line || errorInfo.message || 0,
+      column: err.column || 0,
+      name: 'InitError',
+      message: err.message || errorInfo.message || '',
+      script: errorInfo.script || '',
+      stack: errorInfo.stackTrace || errorInfo.stack || '',
+      timestamp: Date.now(),
+      ref: window.location.href,
+      deployment_stage: getConfigProp('deployment_stage', ''),
+      is_canary: getConfigProp('is_canary', false),
+      rollout_hash: getConfigProp('rollout_hash', ''),
+      is_prerelease: window.__PRERELEASE__ || false,
+      bundle_variant: getConfigProp('bundle_variant', null),
+      request_url: err.url || window.location.href,
+      response_status_code: errorInfo.statusCode || 0
+    }
+  }
+  window.addEventListener('load', function(){
+    if (window.__bufferedErrors && window.__bufferedErrors.length) {
+      if (window.caches && window.caches.keys && window.caches.delete) {
+        window.caches.keys().then(function(keys) {
+          keys.forEach(function(key) {
+            window.caches.delete(key)
+          })
+        })
+      }
+      window.__bufferedErrors.map(function(error) {
+        return normalizeError(error)
+      }).forEach(function(normalizedError) {
+        var request = new XMLHttpRequest();
+        request.open('POST', '/client_error/', true);
+        request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        request.send(JSON.stringify(normalizedError));
+      })
+    }
+  })
+}());
+</script>
     </body>
 </html>
