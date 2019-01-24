@@ -95,8 +95,9 @@ exports.scrapeLocationPage = function(id) {
             if (data && data.entry_data && 
                 data.entry_data.LocationsPage &&
                 data.entry_data.LocationsPage[0] && 
-                data.entry_data.LocationsPage[0].location) {
-                resolve(data.entry_data.LocationsPage[0].location);
+                data.entry_data.LocationsPage[0].graphql && 
+                data.entry_data.LocationsPage[0].graphql.location) {
+                resolve(data.entry_data.LocationsPage[0].graphql.location);
             }
             else {
                 reject(new Error('Error scraping location page or no locations found "' + id + '"'));
@@ -112,7 +113,6 @@ var scrape = function(html) {
     }
     catch(e) {
         if (process.env.NODE_ENV != 'production') {
-            //console.log(html);
             console.error('The HTML returned from instagram was not suitable for scraping');
         }
         return null
