@@ -24,7 +24,7 @@ describe('instagram-tagscrape', function(){
 
     it('should return object containing count, total and media', function(done){
 
-        ig.scrapeTagPage('nrkvalg').then(function(result){
+        ig.scrapeTagPage('nofilter').then(function(result){
             assert.isAtLeast(result.count, 1);
             assert.isAtLeast(result.total, 1);
             assert.equal(result.media.length, result.count);
@@ -48,8 +48,8 @@ describe('instagram-tagscrape', function(){
 
     it('should return data from single post', function(done){
 
-        ig.scrapePostPage('BMmWPcBhGAv').then(function(result){
-            assert.equal(result.id, 1379888153741254703);
+        ig.scrapePostPage('BtAArksHPrV').then(function(result){
+            assert.equal(result.id, 1963572431865838293);
             done();
         });
 
@@ -70,8 +70,8 @@ describe('instagram-tagscrape', function(){
 
     it('should return location data from locationPage', function(done){
 
-        ig.scrapeLocationPage(542401).then(function(result){
-            assert.equal(result.name, 'Det Akademiske Kvarter');
+        ig.scrapeLocationPage(218013238).then(function(result){
+            assert.equal(result.name, 'Aruba');
             done();
         });
 
@@ -81,7 +81,7 @@ describe('instagram-tagscrape', function(){
     it('should return media containing data from loading each post page and location page', function(done){
         this.timeout(10000);
 
-        ig.deepScrapeTagPage('nrkvalg').then(function(result){
+        ig.deepScrapeTagPage('nofilter').then(function(result){
             assert.isDefined(result.media[0].owner.username);
             assert.isDefined(result.media[5].location.lat);
             done();
