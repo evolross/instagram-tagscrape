@@ -4,7 +4,7 @@ var mocha   = require('mocha'),
 
 var nock = require("nock");
 var api = nock("https://www.instagram.com").persist()
-    .get("/explore/tags/nrkvalg").replyWithFile(200, __dirname + '/fixtures/tagPage.html')
+    .get("/explore/tags/nofilter").replyWithFile(200, __dirname + '/fixtures/tagPage.html')
     .get(/\/p\/\w+/).replyWithFile(200, __dirname + '/fixtures/postPage.html')
     .get(/\/explore\/locations\/\d+/).replyWithFile(200, __dirname + '/fixtures/locationPage.html');
 
