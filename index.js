@@ -11,14 +11,16 @@ exports.deepScrapeTagPage = function(tag) {
             return Promise.map(tagPage.media, function(media, i, len) {
                 return exports.scrapePostPage(media.node.shortcode).then(function(postPage){
                     tagPage.media[i] = postPage;
-                    if (postPage.location != null && postPage.location.has_public_page) {
+
+                    //  Location page now requires a login as of 08/16/19. Commenting out for now to hide errors.
+                    /*if (postPage.location != null && postPage.location.has_public_page) {
                         return exports.scrapeLocationPage(postPage.location.id).then(function(locationPage){
                             tagPage.media[i].location = locationPage;
                         })
                         .catch(function(err) {
                             console.log("An error occurred calling scrapeLocationPage inside deepScrapeTagPage" + ":" + err);
                         });
-                    }
+                    }*/
                 })
                 .catch(function(err) {
                     console.log("An error occurred calling scrapePostPage inside deepScrapeTagPage" + ":" + err);
