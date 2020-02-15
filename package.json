@@ -23,11 +23,11 @@
   "homepage": "https://github.com/evolross/instagram-tagscrape#readme",
   "devDependencies": {
     "chai": "3.5.0",
-    "mocha": "3.1.2",
-    "nock": "9.0.2"
+    "mocha": "^7.0.1",
+    "nock": "^11.9.0"
   },
   "dependencies": {
-    "bluebird": "3.4.6",
-    "request": "2.78.0"
+    "bluebird": "^3.7.2",
+    "request": "^2.88.0"
   }
 }
