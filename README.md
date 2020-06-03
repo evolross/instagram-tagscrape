@@ -2,7 +2,7 @@ instagram-tagscrape
 ==============
 NodeJS module for loading posts from Instagram by hashtag, individual post pages and locationpages without API access by means of scraping.
 
-**Working on Instagram's public pages as of February 15th, 2020. However, scrapeLocationPage no longer works as the URL (https://www.instagram.com/explore/locations/) doesn't actually show any posts (and until recently required a login). It has been commented out from within the deepScrapeTagPage function.**
+**Working on Instagram's public pages as of June 2nd, 2020. This fork comments out deepScrapeTagPage and also has a promise timeout of 1.5s per post when using scrapeTagPage because the app we'e using this in was getting rate-limit errors. May have to eventually use a more complex solution.**
 
 [![Build Status](https://travis-ci.org/evolross/instagram-tagscrape.svg?branch=master)](https://travis-ci.org/evolross/instagram-tagscrape)
 
