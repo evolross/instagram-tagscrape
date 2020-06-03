@@ -5,22 +5,43 @@ var request = require('request'),
     locURL  = 'https://www.instagram.com/explore/locations/',
     dataExp = /window\._sharedData\s?=\s?({.+);<\/script>/;
 
-exports.deepScrapeTagPage = function(tag) {
+exports.promiseTimeout = function(time){
     return new Promise(function(resolve, reject){
-        exports.scrapeTagPage(tag).then(function(tagPage){
-            return Promise.map(tagPage.media, function(media, i, len) {
-                return exports.scrapePostPage(media.node.shortcode).then(function(postPage){
-                    tagPage.media[i] = postPage;
+        setTimeout(function(){
+            resolve();
+        }, time);
+    });
+}
 
-                    //  Location page now requires a login as of 08/16/19. Commenting out for now to hide errors.
-                    /*if (postPage.location != null && postPage.location.has_public_page) {
-                        return exports.scrapeLocationPage(postPage.location.id).then(function(locationPage){
-                            tagPage.media[i].location = locationPage;
-                        })
-                        .catch(function(err) {
-                            console.log("An error occurred calling scrapeLocationPage inside deepScrapeTagPage" + ":" + err);
-                        });
-                    }*/
+exports.deepScrapeTagPage = function(tag) {
+    return new Promise(function(resolve, reject) {
+        exports.scrapeTagPage(tag).then(function(tagPage) {
+
+            //  Limit tagPage.media to fifteen posts (if no limit it can return up to 70 posts)
+            tagPage.media = tagPage.media.splice(0, 15);
+
+            return Promise.map(tagPage.media, function(media, i, len) {
+
+                //  Added a timeout here to try to reduce rate-limiting errors                
+                return exports.promiseTimeout(1500 * (i + 1)).then(function(result) {
+
+                    return exports.scrapePostPage(media.node.shortcode).then(function(postPage) {
+
+                        //  Add the result to the media array
+                        tagPage.media[i] = postPage;
+
+                        //  Location page now requires a login as of 08/16/19. Commenting out for now to hide errors.
+                        //  As of 06/02/20 it looks like it no longer requires a login but the app is hitting rate-limiting issues
+                        //  so leaving this commented out anyway. FYI - tho.
+                        /*if (postPage.location != null && postPage.location.has_public_page) {
+                            return exports.scrapeLocationPage(postPage.location.id).then(function(locationPage){
+                                tagPage.media[i].location = locationPage;
+                            })
+                            .catch(function(err) {
+                                console.log("An error occurred calling scrapeLocationPage inside deepScrapeTagPage" + ":" + err);
+                            });
+                        }*/
+                    })
                 })
                 .catch(function(err) {
                     console.log("An error occurred calling scrapePostPage inside deepScrapeTagPage" + ":" + err);
@@ -72,7 +93,10 @@ exports.scrapePostPage = function(code) {
         if (!code) return reject(new Error('Argument "code" must be specified'));
 
         request(postURL + code, function(err, response, body){
+            if (err) return reject(err);
+
             var data = scrape(body);
+
             if (data && data.entry_data && 
                 data.entry_data.PostPage &&
                 data.entry_data.PostPage[0] && 
@@ -92,6 +116,8 @@ exports.scrapeLocationPage = function(id) {
         if (!id) return reject(new Error('Argument "id" must be specified'));
         
         request(locURL + id, function(err, response, body){
+            if (err) return reject(err);
+            
             var data = scrape(body);
 
             if (data && data.entry_data && 
