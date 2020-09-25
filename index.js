@@ -16,7 +16,7 @@ var request = require('request'),
 exports.deepScrapeTagPage = function(tag, proxy, limit) {
 
     console.log("instagram-tagscrape: deepScrapeTagPage: tag, proxy, limit: ", tag, proxy, limit);
-    console.log("instagram-tagscrape: deepScrapeTagPage: process.env.NODE_ENV: ", process.env.NODE_ENV);
+    //console.log("instagram-tagscrape: deepScrapeTagPage: process.env.NODE_ENV: ", process.env.NODE_ENV);
 
     return new Promise(function(resolve, reject) {
         exports.scrapeTagPage(tag, proxy).then(function(tagPage) {
@@ -65,7 +65,7 @@ exports.deepScrapeTagPage = function(tag, proxy, limit) {
 
 exports.scrapeTagPage = function(tag, proxy) {
 
-    console.log("instagram-tagscrape: scrapeTagPage: tag, proxy: ", tag, proxy);
+    //console.log("instagram-tagscrape: scrapeTagPage: tag, proxy: ", tag, proxy);
 
     return new Promise(function(resolve, reject) {
         if (!tag) return reject(new Error('Argument "tag" must be specified'));
@@ -74,7 +74,7 @@ exports.scrapeTagPage = function(tag, proxy) {
         //  https requests to return unauthorized. And we also dynamically add the proxy if it exists
         let requestParams = {
             uri: listURL + tag,
-            rejectUnauthorized: process.env.NODE_ENV != 'production' ? false : true
+            rejectUnauthorized: false  //process.env.NODE_ENV != 'production' ? false : true
         }
 
         if(proxy)
@@ -115,7 +115,7 @@ exports.scrapeTagPage = function(tag, proxy) {
 
 exports.scrapePostPage = function(code, proxy) {
 
-    console.log("instagram-tagscrape: scrapePostPage: code, proxy: ", code, proxy);
+    //console.log("instagram-tagscrape: scrapePostPage: code, proxy: ", code, proxy);
 
     return new Promise(function(resolve, reject) {
         if (!code) return reject(new Error('Argument "code" must be specified'));
@@ -124,7 +124,7 @@ exports.scrapePostPage = function(code, proxy) {
         //  https requests to return unauthorized. And we also dynamically add the proxy if it exists
         let requestParams = {
             uri: postURL + code,
-            rejectUnauthorized: process.env.NODE_ENV != 'production' ? false : true
+            rejectUnauthorized: false  //process.env.NODE_ENV != 'production' ? false : true
         }
 
         if(proxy)
@@ -155,7 +155,7 @@ exports.scrapePostPage = function(code, proxy) {
 
 exports.scrapeLocationPage = function(id, proxy) {
 
-    console.log("instagram-tagscrape: scrapeLocationPage: id, proxy: ", id, proxy);
+    //console.log("instagram-tagscrape: scrapeLocationPage: id, proxy: ", id, proxy);
 
     return new Promise(function(resolve, reject) {
         if (!id) return reject(new Error('Argument "id" must be specified'));
@@ -164,7 +164,7 @@ exports.scrapeLocationPage = function(id, proxy) {
         //  https requests to return unauthorized. And we also dynamically add the proxy if it exists
         let requestParams = {
             uri: locURL + id,
-            rejectUnauthorized: process.env.NODE_ENV != 'production' ? false : true
+            rejectUnauthorized: false  //process.env.NODE_ENV != 'production' ? false : true
         }
 
         if(proxy)
