@@ -15,8 +15,11 @@ var request = require('request'),
 
 exports.deepScrapeTagPage = function(tag, proxy, limit) {
 
+    console.log("instagram-tagscrape: deepScrapeTagPage: tag, proxy, limit: ", tag, proxy, limit);
+    console.log("instagram-tagscrape: deepScrapeTagPage: process.env.NODE_ENV: ", process.env.NODE_ENV);
+
     return new Promise(function(resolve, reject) {
-        exports.scrapeTagPage(tag).then(function(tagPage) {
+        exports.scrapeTagPage(tag, proxy).then(function(tagPage) {
 
             //  Limit tagPage.media (if no limit it can return up to 70 posts)
             if(limit)
@@ -46,37 +49,46 @@ exports.deepScrapeTagPage = function(tag, proxy, limit) {
                     })
                 //})
                 .catch(function(err) {
-                    console.log("An error occurred calling scrapePostPage inside deepScrapeTagPage" + ":" + err);
+                    console.log("instagram-tagscrape: An error occurred calling scrapePostPage inside deepScrapeTagPage" + ":" + err);
                 });
             })
             .then(function(){ resolve(tagPage); })
             .catch(function(err) {
-                console.log("An error occurred resolving tagPage inside deepScrapeTagPage" + ":" + err);
+                console.log("instagram-tagscrape: An error occurred resolving tagPage inside deepScrapeTagPage" + ":" + err);
             });
         })
         .catch(function(err) {
-                console.log("An error occurred calling scrapeTagPage inside deepScrapeTagPage" + ":" + err);
+                console.log("instagram-tagscrape: An error occurred calling scrapeTagPage inside deepScrapeTagPage" + ":" + err);
         });        
     });
 };
 
 exports.scrapeTagPage = function(tag, proxy) {
 
-    return new Promise(function(resolve, reject){
+    console.log("instagram-tagscrape: scrapeTagPage: tag, proxy: ", tag, proxy);
+
+    return new Promise(function(resolve, reject) {
         if (!tag) return reject(new Error('Argument "tag" must be specified'));
 
         //  Now create a dynmaic requestParams object that dynamically passes if this is production. If not, it allows
         //  https requests to return unauthorized. And we also dynamically add the proxy if it exists
         let requestParams = {
             uri: listURL + tag,
-            rejectUnauthorized: process.env.NODE_ENV === 'production'
+            rejectUnauthorized: process.env.NODE_ENV != 'production' ? false : true
         }
 
         if(proxy)
             requestParams.proxy = proxy;
 
-        request(requestParams, function(err, response, body){
-            if (err) return reject(err);
+        request(requestParams, function(err, response, body) {
+
+            //console.log("instagram-tagscrape: response: ", response);
+            //console.log("instagram-tagscrape: body: ", body);
+
+            if(err) {
+                console.log("instagram-tagscrape: scrapeTagPage: err: ", err);
+                return reject(err);
+            }
 
             let data = scrape(body)
 
@@ -102,21 +114,28 @@ exports.scrapeTagPage = function(tag, proxy) {
 };
 
 exports.scrapePostPage = function(code, proxy) {
-    return new Promise(function(resolve, reject){
+
+    console.log("instagram-tagscrape: scrapePostPage: code, proxy: ", code, proxy);
+
+    return new Promise(function(resolve, reject) {
         if (!code) return reject(new Error('Argument "code" must be specified'));
 
         //  Now create a dynmaic requestParams object that dynamically passes if this is production. If not, it allows
         //  https requests to return unauthorized. And we also dynamically add the proxy if it exists
         let requestParams = {
             uri: postURL + code,
-            rejectUnauthorized: process.env.NODE_ENV === 'production'
+            rejectUnauthorized: process.env.NODE_ENV != 'production' ? false : true
         }
 
         if(proxy)
             requestParams.proxy = proxy;
 
-        request(requestParams, function(err, response, body){
-            if (err) return reject(err);
+        request(requestParams, function(err, response, body) {
+
+            if(err) {
+                console.log("instagram-tagscrape: scrapePostPage: err: ", err);
+                return reject(err);
+            }
 
             let data = scrape(body);
 
@@ -135,21 +154,28 @@ exports.scrapePostPage = function(code, proxy) {
 }
 
 exports.scrapeLocationPage = function(id, proxy) {
-    return new Promise(function(resolve, reject){
+
+    console.log("instagram-tagscrape: scrapeLocationPage: id, proxy: ", id, proxy);
+
+    return new Promise(function(resolve, reject) {
         if (!id) return reject(new Error('Argument "id" must be specified'));
 
         //  Now create a dynmaic requestParams object that dynamically passes if this is production. If not, it allows
         //  https requests to return unauthorized. And we also dynamically add the proxy if it exists
         let requestParams = {
             uri: locURL + id,
-            rejectUnauthorized: process.env.NODE_ENV === 'production'
+            rejectUnauthorized: process.env.NODE_ENV != 'production' ? false : true
         }
 
         if(proxy)
             requestParams.proxy = proxy;
         
         request(requestParams, function(err, response, body) {
-            if (err) return reject(err);
+
+            if(err) {
+                console.log("instagram-tagscrape: scrapeLocationPage: err: ", err);
+                return reject(err);
+            }
             
             let data = scrape(body);
 
@@ -169,15 +195,23 @@ exports.scrapeLocationPage = function(id, proxy) {
 
 var scrape = function(html) {
 
+    //console.log("instagram-tagscrape: html: ", html);
+    let htmlMatch;
+    let dataString;
+    let json;
+
     try {
-        var dataString = html.match(dataExp)[1];
-        var json = JSON.parse(dataString);
+        htmlMatch = html.match(dataExp);
+        if(htmlMatch) {
+            dataString = htmlMatch[1];
+            //console.log("instagram-tagscrape: scrape: dataString: ", dataString);
+            json = JSON.parse(dataString);
+        }
+        else
+            console.log("instagram-tagscrape: scrape: The HTML returned from Instagram was not suitable for scraping and/or the request was blocked.");
     }
     catch(e) {
-        if(process.env.NODE_ENV != 'production') {
-            console.error('The HTML returned from Instagram was not suitable for scraping. Or an error occurred and/or request was blocked.');
-            console.log("Error: ", e);
-        }
+        console.log("instagram-tagscrape: scrape: Error: ", e);
         return null;
     }
 
