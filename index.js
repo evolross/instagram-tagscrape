@@ -65,7 +65,7 @@ exports.deepScrapeTagPage = function(tag, proxy, limit) {
 
 exports.scrapeTagPage = function(tag, proxy) {
 
-    console.log("instagram-tagscrape: scrapeTagPage: tag, proxy: ", tag, proxy);
+    //console.log("instagram-tagscrape: scrapeTagPage: tag, proxy: ", tag, proxy);
 
     return new Promise(function(resolve, reject) {
         if (!tag) return reject(new Error('Argument "tag" must be specified'));
@@ -115,7 +115,7 @@ exports.scrapeTagPage = function(tag, proxy) {
 
 exports.scrapePostPage = function(code, proxy) {
 
-    console.log("instagram-tagscrape: scrapePostPage: code, proxy: ", code, proxy);
+    //console.log("instagram-tagscrape: scrapePostPage: code, proxy: ", code, proxy);
 
     return new Promise(function(resolve, reject) {
         if (!code) return reject(new Error('Argument "code" must be specified'));
