@@ -5,13 +5,13 @@ var request = require('request'),
     locURL  = 'https://www.instagram.com/explore/locations/',
     dataExp = /window\._sharedData\s?=\s?({.+);<\/script>/
 
-/*exports.promiseTimeout = function(time){
+exports.promiseTimeout = function(time){
     return new Promise(function(resolve, reject){
         setTimeout(function(){
             resolve();
         }, time);
     });
-}*/
+}
 
 exports.deepScrapeTagPage = function(tag, proxy, limit) {
 
@@ -28,7 +28,7 @@ exports.deepScrapeTagPage = function(tag, proxy, limit) {
             return Promise.map(tagPage.media, function(media, i, len) {
 
                 //  Added a timeout here to try to reduce rate-limiting errors                
-                //return exports.promiseTimeout(1500 * (i + 1)).then(function(result) {
+                return exports.promiseTimeout(5000 * (i + 1)).then(function(result) {
 
                     return exports.scrapePostPage(media.node.shortcode, proxy).then(function(postPage) {
 
@@ -47,7 +47,7 @@ exports.deepScrapeTagPage = function(tag, proxy, limit) {
                             });
                         }*/
                     })
-                //})
+                })
                 .catch(function(err) {
                     console.log("instagram-tagscrape: An error occurred calling scrapePostPage inside deepScrapeTagPage" + ":" + err);
                 });
@@ -65,7 +65,7 @@ exports.deepScrapeTagPage = function(tag, proxy, limit) {
 
 exports.scrapeTagPage = function(tag, proxy) {
 
-    //console.log("instagram-tagscrape: scrapeTagPage: tag, proxy: ", tag, proxy);
+    console.log("instagram-tagscrape: scrapeTagPage: tag, proxy: ", tag, proxy);
 
     return new Promise(function(resolve, reject) {
         if (!tag) return reject(new Error('Argument "tag" must be specified'));
@@ -115,7 +115,7 @@ exports.scrapeTagPage = function(tag, proxy) {
 
 exports.scrapePostPage = function(code, proxy) {
 
-    //console.log("instagram-tagscrape: scrapePostPage: code, proxy: ", code, proxy);
+    console.log("instagram-tagscrape: scrapePostPage: code, proxy: ", code, proxy);
 
     return new Promise(function(resolve, reject) {
         if (!code) return reject(new Error('Argument "code" must be specified'));
@@ -138,6 +138,8 @@ exports.scrapePostPage = function(code, proxy) {
             }
 
             let data = scrape(body);
+
+            //console.log("scrapePostPage: data: ", data);
 
             if (data && data.entry_data && 
                 data.entry_data.PostPage &&
@@ -196,16 +198,19 @@ exports.scrapeLocationPage = function(id, proxy) {
 var scrape = function(html) {
 
     //console.log("instagram-tagscrape: html: ", html);
+
     let htmlMatch;
     let dataString;
     let json;
 
     try {
         htmlMatch = html.match(dataExp);
+        //console.log("instagram-tagscrape: scrape: htmlMatch: ", htmlMatch);
         if(htmlMatch) {
             dataString = htmlMatch[1];
             //console.log("instagram-tagscrape: scrape: dataString: ", dataString);
             json = JSON.parse(dataString);
+            //console.log("instagram-tagscrape: scrape: json: ", json);
         }
         else
             console.log("instagram-tagscrape: scrape: The HTML returned from Instagram was not suitable for scraping and/or the request was blocked.");
